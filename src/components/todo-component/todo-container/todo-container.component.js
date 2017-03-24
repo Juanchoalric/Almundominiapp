@@ -2,14 +2,19 @@
     'use strict';
 
     angular
-        .module('todoComponent')
+        .module('todoComponent', [])
         .component('todoContainer', {
             controller: TODOController,
-            templateUrl: 'todo-component/todo-container/todo-container.html'
+            template: '<div><h1>prueba</h1></div>'
+            //templateUrl: 'todo-component/todo-container/todo-container.html'
         });
 
     function TODOController() {
-        let _self = this;
+        let self = this;
+
+        this.$onInit = function () {
+            console.log('AAAAAAAAAAAAAAAAAAAAAAAAAAH');
+        };
 
         this.addItem = function ($event) {
             console.log($event);
