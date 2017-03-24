@@ -1,0 +1,18 @@
+{
+  "name": "almundominiapp",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Cristian Preiti <cristianpreiti@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/hernimen/Almundominiapp",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

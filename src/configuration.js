@@ -2,7 +2,8 @@ const path = require('path');
 
 module.exports = {
     paths: {
-        sass: path.join(__dirname, '../components/**/*.sass'),
-        pug: path.join(__dirname, '../components/**/*.pug')
+        pug: path.join(__dirname, 'application/**/*.pug'),
+        sass: path.join(__dirname, 'application/**/*.sass'),
+        scripts: path.join(__dirname, 'application/**/*.js')
     }
 };

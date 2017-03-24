@@ -1,6 +1,6 @@
 (function () {
     angular
-        .module('todoComponent', [])
+        .module('todoComponent')
         .component('todoForm', {
             controller: function () {
 

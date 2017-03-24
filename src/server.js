@@ -1,12 +1,16 @@
 const express = require('express');
 const path = require('path');
 
-const app = express();
+const application = express();
 
-app.use(express.static(path.join(__dirname, '../public')));
+application.set('views', path.join(__dirname, '../views'));
+application.set('view engine', 'pug');
 
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'));
+application.use('/static', express.static(path.join(__dirname, '../public')));
+application.use('/static', express.static(path.join(__dirname, '../bower_components')));
+
+application.get('/', function (request, response) {
+    response.render('index');
 });
 
-app.listen(3000);
+application.listen(3000);
