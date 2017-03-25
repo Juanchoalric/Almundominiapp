@@ -7,7 +7,7 @@ const sass = require('gulp-sass');
 const configuration = require('./src/configuration');
 
 gulp.task('package', ['pug', 'scripts'], function () {
-    // Acá haríamos algo re lindo.
+
 });
 
 gulp.task('pug', function () {
@@ -20,7 +20,7 @@ gulp.task('scripts', function () {
     return gulp.src(configuration.paths.scripts)
         .pipe(order(["**/*.module.js", "**/*.js"]))
         .pipe(concat('bundle.js'))
-        .pipe(gulp.dest('public/dist/components'))
+        .pipe(gulp.dest('public/dist'))
 });
 
 gulp.task('watch', function () {

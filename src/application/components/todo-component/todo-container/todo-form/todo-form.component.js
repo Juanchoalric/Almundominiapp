@@ -1,27 +1,23 @@
 (function () {
+    'use strict';
+
     angular
         .module('todoComponent')
         .component('todoForm', {
-            controller: TodoFormController,
-            templateUrl: 'todo-component/todo-container/todo-form.html',
             bindings: {
-                'onAdd': '&'
-            }
+                'newTask': '&'
+            },
+            controller: TodoFormController,
+            templateUrl: 'templates/todo-component/todo-container/todo-form/todo-form.html'
         });
 
     function TodoFormController() {
-        this.createItem = function (label) {
-            if (!this.label) {
-                return;
-            }
-
-            this.onAdd({
+        this.createItem = function () {
+            this.newTask({
                 $event: {
-                    label: this.label
+                    task: this.task
                 }
             });
-
-            this.label = '';
         };
     };
 })();

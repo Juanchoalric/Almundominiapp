@@ -5,30 +5,27 @@
         .module('todoComponent')
         .component('todoContainer', {
             controller: TodoContainerController,
-            templateUrl: './todo-component/todo-container/todo-container.html'
+            templateUrl: 'templates/todo-component/todo-container/todo-container.html'
         });
 
     function TodoContainerController() {
         let self = this;
 
         this.$onInit = function () {
-            self.items = [
+            self.tasks = [
                 {
-                    id: 0,
-                    label: 'PUTO',
-                    complete: false
+                    id: 1,
+                    task: "terminar el proyecto"
                 }
             ];
         };
 
-        this.addItem = function ($event) {
-            let label = $event.label;
+        this.addTask = function ($event) {
+            let task = $event.task;
 
-            _self.todos.push({label, id: _self.todos.length + 1});
-
-            self.items.push({
-                id: self.items.length + 1,
-                label
+            self.tasks.push({
+                id: self.tasks.length + 1,
+                task: task
             });
         };
     }

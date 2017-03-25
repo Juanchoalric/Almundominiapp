@@ -1,3 +1,4 @@
 div
-    todo-form(on-add='$ctrl.addItem($event);')
-    h1 asdasdasd
+    todo-form(new-task='$ctrl.addTask($event);')
+    div(ng-repeat='task in $ctrl.tasks')
+        span {{task}}

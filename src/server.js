@@ -8,6 +8,7 @@ application.set('view engine', 'pug');
 
 application.use('/static', express.static(path.join(__dirname, '../public')));
 application.use('/static', express.static(path.join(__dirname, '../bower_components')));
+application.use('/templates', express.static(path.join(__dirname, '../public/dist/components')));
 
 application.get('/', function (request, response) {
     response.render('index');
