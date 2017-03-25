@@ -20,7 +20,7 @@ gulp.task('scripts', function () {
     return gulp.src(configuration.paths.scripts)
         .pipe(order(["**/*.module.js", "**/*.js"]))
         .pipe(concat('bundle.js'))
-        .pipe(gulp.dest('public/dist'))
+        .pipe(gulp.dest('public/dist/components'))
 });
 
 gulp.task('watch', function () {
