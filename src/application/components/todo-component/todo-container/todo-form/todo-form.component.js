@@ -18,6 +18,7 @@
                     task: this.task
                 }
             });
+            this.task = '';
         };
     };
 })();
