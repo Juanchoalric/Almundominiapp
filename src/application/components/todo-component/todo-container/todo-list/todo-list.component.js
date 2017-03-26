@@ -1,3 +1,14 @@
-/**
- * Created by cristianpreiti on 23/03/17.
- */
+(function(){
+
+  'use strict';
+
+  angular
+  .module('todoComponent', [])
+  .component('todolist', {
+    bindings: {
+
+
+    },
+    templateUrl:
+  })
+})();
