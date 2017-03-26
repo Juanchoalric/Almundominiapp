@@ -35,12 +35,12 @@
             });
         };
 
-        this.deleteTask = function ($event) {
-          let task = $event. task;
-
-          self.tasks = self.tasks.filter(function(){
-            return task.id !== item.id;
-          });
-        };
+        // this.deleteTask = function ($event) {
+        //   let task = $event. task;
+        //
+        //   self.tasks = self.tasks.filter(function(){
+        //     return task.id !== item.id;
+        //   });
+        // };
     }
 })();

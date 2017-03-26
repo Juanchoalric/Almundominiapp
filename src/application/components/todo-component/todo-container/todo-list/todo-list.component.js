@@ -1,14 +1,14 @@
-(function(){
-
-  'use strict';
-
-  angular
-  .module('todoComponent', [])
-  .component('todolist', {
-    bindings: {
-
-
-    },
-    templateUrl:
-  })
-})();
+// (function(){
+//
+//   'use strict';
+//
+//   angular
+//   .module('todoComponent', [])
+//   .component('todolist', {
+//     bindings: {
+//
+//
+//     },
+//     templateUrl:
+//   })
+// })();
