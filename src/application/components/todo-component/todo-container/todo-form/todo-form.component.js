@@ -15,6 +15,10 @@
         let self = this;
 
         this.submitTask = function () {
+            if (!this.task.length) {
+                return;
+            }
+
             this.newTask({
                 $event: {
                     task: this.task
