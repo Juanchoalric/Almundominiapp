@@ -17,14 +17,13 @@
         this.submitTask = function () {
             if (!this.task.length) {
                 return;
+            }else{
+              this.newTask({
+                  $event: {
+                      task: this.task
+                  }
+              });
             }
-
-            this.newTask({
-                $event: {
-                    task: this.task
-                }
-            });
-
             this.task = '';
         };
     };
