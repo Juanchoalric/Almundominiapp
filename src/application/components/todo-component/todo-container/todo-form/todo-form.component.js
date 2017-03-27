@@ -8,16 +8,19 @@
                 'newTask': '&'
             },
             controller: TodoFormController,
-            templateUrl: 'templates/todo-component/todo-container/todo-form/todo-form.html'
+            templateUrl: 'components/todo-component/todo-container/todo-form/todo-form.html'
         });
 
     function TodoFormController() {
-        this.createItem = function () {
+        let self = this;
+
+        this.submitTask = function () {
             this.newTask({
                 $event: {
                     task: this.task
                 }
             });
+
             this.task = '';
         };
     };

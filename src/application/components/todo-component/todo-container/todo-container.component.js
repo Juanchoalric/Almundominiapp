@@ -4,11 +4,12 @@
     angular
         .module('todoComponent')
         .component('todoContainer', {
+            bindings: {
+
+            },
             controller: TodoContainerController,
-            templateUrl: 'templates/todo-component/todo-container/todo-container.html'
+            templateUrl: 'components/todo-component/todo-container/todo-container.html'
         });
-
-
 
     function TodoContainerController() {
         let self = this;
@@ -17,7 +18,7 @@
             self.tasks = [
                 {
                   id: 1,
-                  task: "terminar el proyecto"
+                  task: "Terminar el proyecto"
                 },
                 {
                   id: 2,
