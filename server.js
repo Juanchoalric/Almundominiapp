@@ -6,6 +6,8 @@ const application = express();
 application.set('views', path.join(__dirname, 'views'));
 application.set('view engine', 'pug');
 
+application.locals.pretty = true;
+
 application.use('/static', express.static(path.join(__dirname, 'public')));
 application.use('/static', express.static(path.join(__dirname, 'bower_components')));
 application.use('/components', express.static(path.join(__dirname, 'public/dist/components')));

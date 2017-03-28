@@ -1,18 +1,19 @@
-div#todo-container.panel.panel-default
-    div.panel-heading
-        strong Task List
+div.col-md-6.col-md-offset-3
+    div.panel.panel-default
+        div.panel-heading
+            strong Task List
 
-    div.panel-body
-        todo-form(new-task='$ctrl.addTask($event);')
+        div.panel-body
+            todo-form(new-task='$ctrl.addTask($event);')
 
-    // esto deberia ser un todo-list
-    table.table
-        thead
-            tr
-                th #
-                th Task
-        tbody
-            // esto deberia ser un todo-item (que estaria dentro de todo-form)
-            tr(ng-repeat='item in $ctrl.tasks')
-                td {{item.id}}
-                td {{item.task}}
+        // todo-list
+        table.table
+            thead
+                tr
+                    th #
+                    th Task
+            tbody
+                // todo-item
+                tr(ng-repeat='item in $ctrl.tasks')
+                    td {{item.id}}
+                    td {{item.task}}

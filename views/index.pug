@@ -7,7 +7,9 @@ html(lang='en')
         link(rel='stylesheet', type='text/css', href='static/bootstrap/dist/css/bootstrap.css')
         link(rel='stylesheet', type='text/css', href='components/components.css')
     body(ng-app='Application')
-        todo-container
+        main.container
+            section.row
+                todo-container
 
         script(src='static/angular/angular.min.js')
         script(src='static/dist/bundle.js')
