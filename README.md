@@ -5,10 +5,10 @@
 - bower install
 
 ### :clipboard: Estáticos
-- gulp
+- gulp package
 
 ### :clipboard: Servidor
-- node src/server
+- gulp nodemon
 
 ---
 

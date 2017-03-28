@@ -15,14 +15,14 @@
         let self = this;
 
         this.submitTask = function () {
-            if (!this.task.length) {
+            if (!this.task) {
                 return;
-            }else{
-              this.newTask({
-                  $event: {
-                      task: this.task
-                  }
-              });
+            } else {
+                this.newTask({
+                    $event: {
+                        task: this.task
+                    }
+                });
             }
             this.task = '';
         };
