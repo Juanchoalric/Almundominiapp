@@ -1,7 +1,7 @@
 {
   "name": "almundominiapp",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "authors": [
     "Cristian Preiti <cristianpreiti@gmail.com>"
   ],
@@ -14,5 +14,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.3"
+  }
 }
