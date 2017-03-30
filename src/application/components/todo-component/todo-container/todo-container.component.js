@@ -17,38 +17,18 @@
         let self = this;
 
         this.$onInit = function () {
-
-          self.tasks = todoService.getTasks();
-            // self.tasks = [
-            //     {
-            //       id: 1,
-            //       task: "Terminar el proyecto"
-            //     },
-            //     {
-            //       id: 2,
-            //       task: "Empezar el proyecto"
-            //     }
-            // ];
+            self.tasks = todoService.getTasks();
         };
 
         this.addTask = function ($event) {
-            //let task = $event.task;
-            self.tasks = todoService.addTask($event.task);
+            let task = $event.task;
+            todoService.addTask(task);
 
-
-            // self.tasks.push({
-            //     id: self.tasks.length + 1,
-            //     task: task
-            // });
+            self.tasks = todoService.getTasks();
         };
 
         this.deleteTask = function ($event) {
-          let task = $event. task;
-
-          self.tasks = todoService.deleteTask();
-          // self.tasks = self.tasks.filter(function(){
-          //   return task.id !== item.id;
-          // });
+            let task = $event.task;
         };
     }
 })();

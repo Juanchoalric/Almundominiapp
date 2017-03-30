@@ -7,13 +7,4 @@ div.col-md-6.col-md-offset-3
             todo-form(new-task='$ctrl.addTask($event);')
 
         // todo-list
-        table.table
-            thead
-                tr
-                    th #
-                    th Task
-            tbody
-                // todo-item
-                tr(ng-repeat='item in $ctrl.tasks')
-                    td {{item.id}}
-                    td {{item.task}}
+        todo-list(tasks='$ctrl.tasks')
