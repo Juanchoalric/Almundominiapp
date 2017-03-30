@@ -10,4 +10,8 @@ button {
   border: 1px solid grey;
   color: black;
   background-color: transparent;
+  &:hover{
+    color: white;
+    background-color: grey;
+  }
 }
