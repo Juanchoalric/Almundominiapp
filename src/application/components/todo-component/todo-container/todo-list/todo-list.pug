@@ -1,0 +1,3 @@
+ol
+    li(ng-repeat='item in $ctrl.items')
+        todo-item(item='item', complete-item='$ctrl.completeItem($locals)', delete-item='$ctrl.deleteItem($locals)')

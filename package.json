@@ -1,43 +1,30 @@
 {
-  "name": "am-components-workshop",
+  "name": "almundominiapp",
   "version": "1.0.0",
-  "description": "Another one...",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-nodemon": "^2.2.1",
+    "gulp-order": "^1.1.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^3.1.0"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prestart": "gulp",
-    "start": "lite-server -c bs-config.json"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab01pr.almundo.it:node-modules/am-components-workshop.git"
+    "url": "git+https://github.com/hernimen/Almundominiapp.git"
   },
-  "author": "",
+  "author": "Cristian Preiti <cristianpreiti@gmail.com>",
   "license": "ISC",
-  "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-angular-templatecache": "^2.0.0",
-    "gulp-clean": "^0.3.2",
-    "gulp-combine-mq": "^0.4.0",
-    "gulp-csso": "^2.0.0",
-    "gulp-htmlmin": "^3.0.0",
-    "gulp-if": "^2.0.1",
-    "gulp-inject": "^4.1.0",
-    "gulp-jade": "^1.1.0",
-    "gulp-load-plugins": "^1.2.0",
-    "gulp-order": "^1.1.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-rev": "^7.1.0",
-    "gulp-sass": "^2.3.2",
-    "gulp-strip-debug": "^1.1.0",
-    "gulp-uglify": "^1.5.3",
-    "jade": "^1.11.0",
-    "lite-server": "^2.2.2",
-    "main-bower-files": "^2.13.1",
-    "merge-stream": "^1.0.0",
-    "stream-series": "^0.1.1"
+  "bugs": {
+    "url": "https://github.com/hernimen/Almundominiapp/issues"
   },
-  "dependencies": {
-    "gulp-concat": "^2.6.1"
-  }
+  "homepage": "https://github.com/hernimen/Almundominiapp#readme"
 }

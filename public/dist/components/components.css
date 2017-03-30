@@ -1,0 +1,25 @@
+.panel.panel-default {
+  background-color: azure; }
+  .panel.panel-default .panel-heading {
+    background-color: lightgreen; }
+  .panel.panel-default .panel-body {
+    background-color: azure; }
+
+.complete {
+  color: red;
+  text-decoration: line-through; }
+
+button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-radius: 50px;
+  border: 1px solid grey;
+  color: black;
+  background-color: transparent; }
+  button:hover {
+    color: white;
+    background-color: grey; }
+
+body {
+  padding: 2.5rem 0; }
