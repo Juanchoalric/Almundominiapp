@@ -1,10 +1,9 @@
 div.col-md-6.col-md-offset-3
     div.panel.panel-default
         div.panel-heading
-            strong Task List
+            strong Tasks
 
         div.panel-body
-            todo-form(new-task='$ctrl.addTask($event);')
+            todo-form(add-item='$ctrl.addItem($event);')
 
-        // todo-list
-        todo-list(tasks='$ctrl.tasks')
+        todo-list(items='$ctrl.getItems();', complete-item='$ctrl.completeItem($event)', delete-item='$ctrl.deleteItem($event)')

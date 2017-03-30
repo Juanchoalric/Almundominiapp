@@ -1,38 +1,48 @@
-(function (){
-  'use strict';
+(function () {
+    'use strict';
 
-  angular
-    .module('todoComponent')
-    .service('todoService', todoService);
+    angular
+        .module('todoComponent')
+        .service('todoService', TodoService);
 
-  todoService.$inject = [];
+    TodoService.$inject = [];
 
-  function todoService(){
-    this.tasks = [
-      {
-        id:1,
-        task:"Terminar el proyecto",
-      },
-      {
-        id:2,
-        task: "Empezar el proyecto",
-      }
-    ];
+    function TodoService() {
+        this.tasks = [
+            {
+                id: 1,
+                task: "Terminar el proyecto",
+                complete: true
+            },
+            {
+                id: 2,
+                task: "Empezar el proyecto",
+                complete: false
+            }
+        ];
 
-    this.getTasks = () => this.tasks;
+        this.getTasks = () => this.tasks;
 
-    this.addTask = function addTask(task) {
-      this.tasks.push({
-        id: this.tasks.length + 1,
-        task: task
-      });
+        this.getTasksLength = () => this.tasks.length;
+
+        this.addTask = (value) => {
+            this.tasks.push({
+                id: this.getTasksLength() + 1,
+                task: value
+            });
+        };
+
+        this.completeTask = (value) => {
+            this.tasks.forEach(function (task) {
+                if (task.id === value)
+                    task.complete = true;
+            });
+        };
+
+        this.deleteTask = (value) => {
+            this.tasks = this.tasks.filter(function (task) {
+                return value !== task.id;
+            });
+        };
     }
-
-    // ARREGLARLO
-    function deleteTask(){
-      this.tasks = this.tasks.filter(function(){
-          return task.id !== item.id;
-        });
-    }
-  }
 })();

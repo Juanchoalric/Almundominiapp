@@ -5,26 +5,25 @@
         .module('todoComponent')
         .component('todoForm', {
             bindings: {
-                'newTask': '&'
+                'addItem': '&'
             },
             controller: TodoFormController,
             templateUrl: 'components/todo-component/todo-container/todo-form/todo-form.html'
         });
 
     function TodoFormController() {
-        let self = this;
-
-        this.submitTask = function () {
-            if (!this.task) {
-                return;
-            } else {
-                this.newTask({
-                    $event: {
-                        task: this.task
-                    }
-                });
+        this.submitItem = function () {
+            if (!this.item) {
+                return false;
             }
-            this.task = '';
+
+            this.addItem({
+                $event: {
+                    item: this.item
+                }
+            });
+
+            this.item = '';
         };
-    };
+    }
 })();

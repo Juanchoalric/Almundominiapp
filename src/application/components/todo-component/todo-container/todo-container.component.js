@@ -4,31 +4,34 @@
     angular
         .module('todoComponent')
         .component('todoContainer', {
-            bindings: {
-
-            },
+            bindings: {},
             controller: TodoContainerController,
             templateUrl: 'components/todo-component/todo-container/todo-container.html'
         });
 
     TodoContainerController.$inject = ['todoService'];
 
-    function TodoContainerController(todoService) {
-        let self = this;
-
-        this.$onInit = function () {
-            self.tasks = todoService.getTasks();
+    function TodoContainerController(TodoService) {
+        this.getItems = function () {
+            return TodoService.getTasks();
         };
 
-        this.addTask = function ($event) {
-            let task = $event.task;
-            todoService.addTask(task);
+        this.addItem = function ($event) {
+            let itemTask = $event.item;
 
-            self.tasks = todoService.getTasks();
+            TodoService.addTask(itemTask);
         };
 
-        this.deleteTask = function ($event) {
-            let task = $event.task;
+        this.completeItem = function ($event) {
+            let itemId = $event.item.id;
+
+            TodoService.completeTask(itemId);
+        };
+
+        this.deleteItem = function ($event) {
+            let itemId = $event.item.id;
+
+            TodoService.deleteTask(itemId);
         };
     }
 })();
