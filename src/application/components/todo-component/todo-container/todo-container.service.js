@@ -3,9 +3,10 @@
 
   angular
   .module('todoComponent')
-  .service('TodoService', TodoService);
+  .service('todoService', TodoService);
 
   function TodoService(){
+
     this.getTasks = getTasks;
 
     function getTasks(){
