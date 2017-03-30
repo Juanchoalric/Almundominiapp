@@ -11,12 +11,14 @@
             templateUrl: 'components/todo-component/todo-container/todo-container.html'
         });
 
-    function TodoContainerController() {
+    TodoContainerController.$inject = ['todoService'];
+
+    function TodoContainerController(todoService) {
         let self = this;
 
         this.$onInit = function () {
 
-          self.tasks = TodoService.getTasks();
+          self.tasks = todoService.getTasks();
             // self.tasks = [
             //     {
             //       id: 1,
@@ -30,8 +32,10 @@
         };
 
         this.addTask = function ($event) {
-            let task = $event.task;
-            self.tasks = TodoService.addTask();
+            //let task = $event.task;
+            self.tasks = todoService.addTask($event.task);
+
+
             // self.tasks.push({
             //     id: self.tasks.length + 1,
             //     task: task
@@ -41,7 +45,7 @@
         this.deleteTask = function ($event) {
           let task = $event. task;
 
-          self.tasks = TodoService.deleteTask();
+          self.tasks = todoService.deleteTask();
           // self.tasks = self.tasks.filter(function(){
           //   return task.id !== item.id;
           // });

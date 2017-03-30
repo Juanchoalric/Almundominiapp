@@ -3,13 +3,22 @@
 
   angular
   .module('todoComponent')
-  .service('todoService', TodoService);
+  .service('todoService', todoService);
 
+  todoService.$inject = [];
 
-
-  function TodoService(){
+  function todoService(){
 
     this.getTasks = getTasks;
+
+    this.addTask = function addTask(task) {
+      this.getTasks().push({
+        id: this.getTasks().lenght + 1,
+        task: task
+      });
+    }
+
+    this.deleteTask = deleteTask;
 
     function getTasks(){
       return [
@@ -24,13 +33,6 @@
         finished: true
       }];
     }
-
-    function addTask(){
-      this.tasks.push({
-        id: this.tasks.lenght + 1,
-        task: task
-      });
-    };
 
     function deleteTask(){
       this.tasks = this.tasks.filter(function(){
