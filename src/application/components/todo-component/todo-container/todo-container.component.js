@@ -11,10 +11,6 @@
             templateUrl: 'components/todo-component/todo-container/todo-container.html'
         });
 
-    // TaskController.$inject = ['TodoService'];
-    // 
-    // /* @ngInject */
-
     function TodoContainerController() {
         let self = this;
 
