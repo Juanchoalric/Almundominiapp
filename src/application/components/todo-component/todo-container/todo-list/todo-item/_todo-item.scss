@@ -1,4 +1,13 @@
 .complete {
-  color: lightgray;
+  color: red;
   text-decoration: line-through;
+}
+button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  border-radius: 50px;
+  border-width: 0px;
+  color: white;
+  background-color: grey;
 }
