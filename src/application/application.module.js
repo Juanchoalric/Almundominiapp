@@ -3,6 +3,7 @@
 
     angular
         .module('Application', [
+            'angular-storage',
             'Components'
         ]);
 })();

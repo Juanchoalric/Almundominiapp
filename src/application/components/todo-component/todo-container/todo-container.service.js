@@ -5,21 +5,12 @@
         .module('todoComponent')
         .service('todoService', TodoService);
 
-    TodoService.$inject = [];
+    TodoService.$inject = ['store'];
 
-    function TodoService() {
-        this.tasks = [
-            {
-                id: 1,
-                task: "Terminar el proyecto",
-                complete: true
-            },
-            {
-                id: 2,
-                task: "Empezar el proyecto",
-                complete: false
-            }
-        ];
+    function TodoService(store) {
+        this.setTasks = (value) => {
+            this.tasks = value;
+        };
 
         this.getTasks = () => this.tasks;
 
@@ -28,7 +19,8 @@
         this.addTask = (value) => {
             this.tasks.push({
                 id: this.getTasksLength() + 1,
-                task: value
+                task: value,
+                complete: false
             });
         };
 
@@ -43,6 +35,18 @@
             this.tasks = this.tasks.filter(function (task) {
                 return value !== task.id;
             });
+        };
+
+        this.saveTasks = () => {
+            store.set('tasks', JSON.stringify(this.tasks));
+        };
+
+        this.restoreTasks = () => {
+            let tasks = store.get('tasks');
+
+            if (tasks !== undefined && tasks !== null) {
+                return JSON.parse(tasks);
+            }
         };
     }
 })();
