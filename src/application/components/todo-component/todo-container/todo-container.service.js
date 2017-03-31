@@ -44,7 +44,7 @@
         this.restoreTasks = () => {
             let tasks = store.get('tasks');
 
-            if (tasks !== undefined && tasks !== null) {
+            if (tasks !== 'undefined' && tasks !== null) {
                 return JSON.parse(tasks);
             }
         };
